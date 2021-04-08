@@ -38,7 +38,7 @@ module.exports = {
   async create(newJob) {
     const db = await Database();
 
-    db.run(`INSERT INTO jobs (
+    await db.run(`INSERT INTO jobs (
       name,
       daily_hours,
       total_hours,
@@ -50,6 +50,6 @@ module.exports = {
       ${newJob.created_at}
     )`);
 
-    db.close();
+    await db.close();
   },
 };

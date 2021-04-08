@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/styles/partials/forms.css" />
     <link rel="stylesheet" href="/styles/partials/animations.css" />
     <link rel="stylesheet" href="/styles/pages/job.css" />
+    <link rel="stylesheet" href="/styles/partials/formErrorMessage.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -35,6 +36,8 @@
             <div class="input-wrapper">
               <label for="name">Nome do Job</label>
               <input type="text" id="name" name="name" />
+
+              <%- include("parts/form-error") %>
             </div>
 
             <div class="input-group">
@@ -49,6 +52,8 @@
                   id="daily-hours"
                   name="daily-hours"
                 />
+
+                <%- include("parts/form-error") %>
               </div>
 
               <div class="input-wrapper">
@@ -57,6 +62,7 @@
                   horas para esse Job?</label
                 >
                 <input type="number" id="total-hours" name="total-hours" />
+                <%- include("parts/form-error") %>
               </div>
             </div>
           </fieldset>
@@ -85,5 +91,8 @@
       </aside>
     </div>
     <!-- end container -->
+
+    <script src="/scripts/validateFormJob.js"></script>
+    <script src="/scripts/utils/validateFormUtils.js"></script>
   </body>
 </html>
