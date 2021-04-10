@@ -4,9 +4,14 @@ const Profile = require('../model/Profile');
 
 module.exports = {
   async save(req, res) {
-    await Job.create({ ...req.body, created_at: Date.now() });
+    try {
+      await Job.create({ ...req.body, created_at: Date.now() });
 
-    return res.redirect('/');
+      return res.redirect('/');
+    } catch (err) {
+      console.error('Save error in JobController', err);
+      return res.redirect('/404');
+    }
   },
   create(req, res) {
     return res.render('job');
@@ -18,7 +23,7 @@ module.exports = {
 
     const job = jobs.find(({ id }) => Number(id) === Number(jobId));
 
-    if (!job) return res.send('Job not found');
+    if (!job) return res.redirect('/404');
 
     const profile = await Profile.get();
 
@@ -28,24 +33,34 @@ module.exports = {
   },
 
   async update(req, res) {
-    const jobId = req.params.id;
+    try {
+      const jobId = req.params.id;
 
-    const updatedJob = {
-      name: req.body.name,
-      'total-hours': req.body['total-hours'],
-      'daily-hours': req.body['daily-hours'],
-    };
+      const updatedJob = {
+        name: req.body.name,
+        'total-hours': req.body['total-hours'],
+        'daily-hours': req.body['daily-hours'],
+      };
 
-    await Job.update(updatedJob, jobId);
+      await Job.update(updatedJob, jobId);
 
-    res.redirect('/job/' + jobId);
+      res.redirect('/job/' + jobId);
+    } catch (err) {
+      console.log('Update error in JobController', err);
+      return res.redirect('/404');
+    }
   },
 
   async delete(req, res) {
-    const jobId = req.params.id;
+    try {
+      const jobId = req.params.id;
 
-    await Job.delete(jobId);
+      await Job.delete(jobId);
 
-    return res.redirect('/');
+      return res.redirect('/');
+    } catch (err) {
+      console.log('Delete error in JobController', err);
+      res.redirect('/404');
+    }
   },
 };
