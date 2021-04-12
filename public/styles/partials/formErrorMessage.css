@@ -1,10 +1,11 @@
 form .error-message {
   padding: 0.5rem;
   color: var(--color-secondary);
-  background-color: #f4bb755d;
+  background-color: rgba(244, 187, 117, 0.048);
   border-radius: 5px;
   text-align: center;
-
+  font-size: 1.1rem;
+  font-weight: 500;
   display: none;
 }
 
@@ -13,6 +14,6 @@ form .show-error-message .error-message {
 }
 
 form .show-error-message input[type] {
-  border-color: #f4bb755d;
+  border-color: rgba(244, 187, 117, 0.26);
   border-width: 2px;
 }
