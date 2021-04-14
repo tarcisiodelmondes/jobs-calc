@@ -12,6 +12,7 @@ server.use(express.urlencoded({ extended: true }));
 
 server.use(routes);
 
-server.listen(3000, () => {
-  console.log(path.resolve(__dirname, 'views', 'index.ejs'));
+const port = process.env.PORT || 3000;
+server.listen(port, () => {
+  console.log('Acesse http://localhost:3000');
 });
