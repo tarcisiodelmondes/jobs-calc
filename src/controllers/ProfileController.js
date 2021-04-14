@@ -25,6 +25,7 @@ module.exports = {
       ...req.body,
       'value-hour': valueHour,
     });
+    console.log(req.body);
 
     return res.redirect('/profile');
   },

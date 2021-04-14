@@ -43,7 +43,19 @@
       <main>
         <form id="form-profile" action="/profile" method="POST">
           <fieldset>
-            <legend>Dados do perfil</legend>
+            <div class="row">
+              <legend>Dados do perfil</legend>
+              <div id="dark-mode-button">
+                <p>Modo escuro</p>
+                <input
+                  class="sr-only"
+                  type="checkbox"
+                  name="theme"
+                  id="switch"
+                />
+                <label for="switch"></label>
+              </div>
+            </div>
             <div class="separator light"></div>
 
             <div class="input-group">
@@ -129,5 +141,6 @@
 
     <script src="/scripts/validateFormProfile.js"></script>
     <script src="/scripts/utils/validateFormUtils.js"></script>
+    <%- include('parts/theme') %>
   </body>
 </html>

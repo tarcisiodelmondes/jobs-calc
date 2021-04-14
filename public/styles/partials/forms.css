@@ -46,7 +46,7 @@ input {
   font-family: IBM Plex Sans;
   font-weight: 500;
 
-  background: #fcfdff;
+  background: var(--color-input-background);
 
   border: 1px solid #e1e3e6;
   border-radius: 0.313rem;
@@ -55,7 +55,7 @@ input {
 
   width: 100%;
 
-  color: var(--color-card-title);
+  color: var(--color-input-text);
 }
 
 ::placeholder {
