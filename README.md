@@ -38,6 +38,10 @@
 
 <a id="pre-requisitos"></a>
 
+## Demonstração da aplicação
+
+Acesse: <https://jobs-calc1.herokuapp.com/>
+
 ## Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina:
