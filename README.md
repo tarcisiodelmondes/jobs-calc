@@ -54,7 +54,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/tarcisiodelmondes/jobs-calc.git>
+$ git clone https://github.com/tarcisiodelmondes/jobs-calc.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd jobs-calc
