@@ -38,6 +38,10 @@
 
 <a id="pre-requisitos"></a>
 
+## Demonstração da aplicação
+
+Acesse: <https://jobs-calc1.herokuapp.com/>
+
 ## Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina:
@@ -50,7 +54,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/tarcisiodelmondes/jobs-calc.git>
+$ git clone https://github.com/tarcisiodelmondes/jobs-calc.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd jobs-calc
@@ -79,7 +83,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - EJS
 - Express
 - SQLite
-- <a id="projeto"></a>
+
+<a id="projeto"></a>
 
 ## 💻 Projeto
 
@@ -99,4 +104,4 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://di
+Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
