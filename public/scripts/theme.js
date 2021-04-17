@@ -95,18 +95,9 @@ const saveTheme = (theme) => {
 };
 
 const loadTheme = (theme) => {
-  console.log(theme);
-  switch (theme) {
-    case 'dark':
-      checkbox ? (checkbox.checked = true) : undefined;
-      changeColors(darkMode);
-      break;
-    case 'light':
-      checkbox ? (checkbox.checked = false) : undefined;
-      changeColors(initialColors);
-      break;
-    default:
-      break;
+  if (theme === 'dark') {
+    checkbox ? (checkbox.checked = true) : undefined;
+    changeColors(darkMode);
   }
 };
 
@@ -125,6 +116,4 @@ checkbox &&
     saveTheme(theme);
   });
 
-window.onload = loadTheme(
-  JSON.parse(localStorage.getItem('jobs-calc:theme')) || 'light',
-);
+window.onload = loadTheme(JSON.parse(localStorage.getItem('jobs-calc:theme')));
