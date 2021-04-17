@@ -83,7 +83,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - EJS
 - Express
 - SQLite
-- <a id="projeto"></a>
+
+<a id="projeto"></a>
 
 ## 💻 Projeto
 
